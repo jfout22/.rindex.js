@@ -1,0 +1,11 @@
+function rindex(str, subs){
+    for (i = 1; i <= str.length; i++){
+        let lastIndex = str.length - i;
+        let temp = str.substring((lastIndex + 1), lastIndex - (subs.length - 1));
+        if (temp===subs){
+            return (str.length - i) - (subs.length - 1)
+        } else{
+            continue
+        }
+    } return -1
+}
